@@ -7,7 +7,7 @@ I would add one more piece to this: Release checks in the deployment pipeline. B
 
 ## TDD approach
 
-I would have started on the highest level possible given the requirements available: with writing tests for the expected request/response patterns. What the request HTTP headers are and potentially the body (payload) for each request and the response HTTP status code and body.
+I would have started on the highest level possible given the requirements available: with writing tests for the expected request/response patterns with for instance [nock](https://github.com/nock/nock). What the request HTTP headers are and potentially the body (payload) for each request and the response HTTP status code and body.
 After that it's good to start write out the code to make the first test pass.
 This will likely have produced a few modules or functions that need to be tested with unit or integration tests.
 Those are then of course also following the TDD approach.
