@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-// TODO: all the console logs/infos should be logged using a logger
+// TODO: all the console logs/infos should be logged using a logger.
 
 export const fetchTransactionData = async <T>(url: string): Promise<T> => {
   try {

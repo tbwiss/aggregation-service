@@ -8,7 +8,7 @@ export interface GetAggregatedUserDataResponse {
   timestamp: string;
 }
 
-// This would also have a "meta" object usually. Keeping it simple though.
+// This would also have a "meta" object usually (pagination etc). Keeping it simple though.
 export type GetTransactionResponse = Transaction[];
 
 export interface UserData {

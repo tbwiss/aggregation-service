@@ -13,7 +13,7 @@ cron.schedule("*/15 * * * * *", () => {
 });
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Server ok");
+  res.send("server ok");
 });
 
 app.get("/users/:id", (req: Request, res: Response) => {
@@ -35,6 +35,10 @@ app.get("/users/:id", (req: Request, res: Response) => {
       .status(500)
       .json({ error: "An error occurred while fetching the user" });
   }
+});
+
+app.get("/requested-payouts/:userId", (req: Request, res: Response) => {
+  res.status(500).json({ error: "Not implemented" });
 });
 
 app.listen(port, () => {
