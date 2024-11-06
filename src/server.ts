@@ -1,9 +1,16 @@
 import express, { Request, Response } from "express";
+import cron from "node-cron";
 import { getUserAggregateById } from "./services/user-service";
+import { fetchTransactions } from "./services/transaction-service";
 
 const app = express();
 
-const port: number = 3000;
+const port: number = 3100;
+
+// Fetch transactions every 15 seconds
+cron.schedule("*/15 * * * * *", () => {
+  fetchTransactions();
+});
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Server ok");

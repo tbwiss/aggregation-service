@@ -1,9 +1,10 @@
+import { getUserAggregate } from "../db-access/db-access";
 import { GetAggregatedUserDataResponse } from "./../types";
 
 export const getUserAggregateById = (
   id: string
 ): GetAggregatedUserDataResponse | undefined => {
-  const user = getUserAggregateById(id);
+  const user = getUserAggregate(id);
   if (!user) {
     return undefined;
   }
