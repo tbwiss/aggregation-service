@@ -2,6 +2,12 @@
 
 ## Run the code yourself
 
+Install the dependencies.
+
+```
+npm install
+```
+
 Start with running the mock transaction server:
 
 ```
