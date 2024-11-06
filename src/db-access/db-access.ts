@@ -15,7 +15,7 @@ export const getUserAggregate = (id: string): UserData | undefined => {
   return database.find((db) => id === db.userId);
 };
 
-const updateUser = (transaction: Transaction): void => {
+export const updateUser = (transaction: Transaction): void => {
   const user = getUserAggregate(transaction.userId);
 
   let nextUserData: UserData;
